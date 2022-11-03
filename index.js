@@ -172,4 +172,4 @@ function arrayLargestNumber(array) {
   console.log(finalResult);
 }
 
-arrayLargestNumber([2, 20, 24, 6, 8]);
+arrayLargestNumber([2, 20, -24, 6, 8]);
