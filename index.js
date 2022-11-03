@@ -56,33 +56,33 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 // if n=2 then return 5
 
-function sort(array, n) {
-  //first sort the array
-  let temp;
-  for (let i = 0; i < array.length; i++) {
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[i] > array[j]) {
-        temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-      }
-    }
-  }
-  console.log(array);
-  // find the nth max in the sorted array
-  let max = array[0];
-  for (let i = 0; i < array.length; i++) {
-    if (max < array[i]) {
-      max = array[i];
-    }
-  }
+// function sort(array, n) {
+//   //first sort the array
+//   let temp;
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = i + 1; j < array.length; j++) {
+//       if (array[i] > array[j]) {
+//         temp = array[i];
+//         array[i] = array[j];
+//         array[j] = temp;
+//       }
+//     }
+//   }
+//   console.log(array);
+//   // find the nth max in the sorted array
+//   let max = array[0];
+//   for (let i = 0; i < array.length; i++) {
+//     if (max < array[i]) {
+//       max = array[i];
+//     }
+//   }
 
-  console.log(max);
-  let index = array.length - n;
-  let nthmax = array[index];
-  console.log(n + 'th largest number is' + nthmax);
-}
-sort([3, 2, 1, 5, 6, 4], -1);
+//   console.log(max);
+//   let index = array.length - n;
+//   let nthmax = array[index];
+//   console.log(n + 'th largest number is' + nthmax);
+// }
+// sort([3, 2, 1, 5, 6, 4], -1);
 
 //Test Cases for the above function
 
@@ -113,3 +113,63 @@ sort([3, 2, 1, 5, 6, 4], -1);
 
 //if n=0 return undefined
 //if n=-1 return undefined
+
+// let temp;
+
+// let arr = [3,2,8,5,4,2];
+// for (let i = 0; i < arr. length; i++) {
+//    for (let j = i + 1; j < arr. length; j++) {
+//      if (arr[i] < arr[j]) { temp = arr[i]; arr[i] = arr[j]; arr[j] = temp;
+//      }
+//     }
+//    }
+
+//    console.log(arr);
+
+//  let concatedArray=arr.join("");
+
+//  console.log(concatedArray);
+
+//  const array = String(concatedArray)
+// .split('')
+// .map(str => Number(str));
+
+// console.log(array);
+
+//step1: we will have an array
+//step2:join the array
+//step3:split the array
+//step4:sort the array in descending order
+//step 5: join again
+
+//step 6:return largest number.
+
+function arrayLargestNumber(array) {
+  let temp;
+  let concatedArray = array.join('');
+
+  console.log(concatedArray);
+
+  let newArray = String(concatedArray)
+    .split('')
+    .map((str) => Number(str));
+
+  console.log(newArray);
+
+  for (let i = 0; i < newArray.length; i++) {
+    for (let j = i + 1; j < newArray.length; j++) {
+      if (newArray[i] < newArray[j]) {
+        temp = newArray[i];
+        newArray[i] = newArray[j];
+        newArray[j] = temp;
+      }
+    }
+  }
+
+  console.log(newArray);
+
+  let finalResult = newArray.join('');
+  console.log(finalResult);
+}
+
+arrayLargestNumber([2, 20, 24, 6, 8]);
