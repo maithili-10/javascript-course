@@ -14,23 +14,36 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 //   getData:function(){
 //   console.log(`my name is ${bioData.myname}`)
 //   }
-  
+
 //   }
-  
+
 // bioData.getData()
 
 //second way of creating object
 
+// let bioData={
 
+//   myname:"maithili",
+//   myAge:"26",
+//   getData(){
+//   console.log(`my name is ${bioData.myname}`)
+//   }
 
-let bioData={
+//   }
 
-  myname:"maithili",
-  myAge:"26",
-  getData(){
-  console.log(`my name is ${bioData.myname}`)
-  }
-  
-  }
-  
-bioData.getData()
+// bioData.getData()
+
+//object inside object
+
+let bioData = {
+  myname: {
+    firstname: 'maithili',
+    lastname: 'kammila',
+  },
+  myAge: '26',
+  getData() {
+    console.log(`my name is ${bioData.myname}`);
+  },
+};
+
+bioData.getData();
