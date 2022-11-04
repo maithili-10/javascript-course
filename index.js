@@ -222,19 +222,19 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 //what will be the output of this below code?
 
-// let bioData = {
-//   myname: {
-//     realname: 'maithili',
-//     channelname: 'myra vlogs',
-//   },
-//   myage: 26,
-//   getBioData() {
-//     console.log(
-//       `my name is ${bioData.myname.channelname} and my age is ${bioData.myage}`
-//     );
-//   },
-// };
+let bioData = {
+  myname: {
+    realname: 'maithili',
+    channelname: 'myra vlogs',
+  },
+  myage: 26,
+  getBioData() {
+    console.log(
+      `my name is ${this.myname.channelname} and my age is ${this.myage}`
+    );
+  },
+};
 
-// bioData.getBioData();
+bioData.getBioData();
 
 //ouput:my name is myra vlogs and my age is 26
