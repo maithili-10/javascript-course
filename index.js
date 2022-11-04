@@ -144,32 +144,97 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 //step 6:return largest number.
 
-function arrayLargestNumber(array) {
-  let temp;
-  let concatedArray = array.join('');
+// function arrayLargestNumber(array) {
+//   let temp;
+//   let concatedArray = array.join('');
 
-  console.log(concatedArray);
+//   console.log(concatedArray);
 
-  let newArray = String(concatedArray)
-    .split('')
-    .map((str) => Number(str));
+//   let newArray = String(concatedArray)
+//     .split('')
+//     .map((str) => Number(str));
 
-  console.log(newArray);
+//   console.log(newArray);
 
-  for (let i = 0; i < newArray.length; i++) {
-    for (let j = i + 1; j < newArray.length; j++) {
-      if (newArray[i] < newArray[j]) {
-        temp = newArray[i];
-        newArray[i] = newArray[j];
-        newArray[j] = temp;
-      }
-    }
-  }
+//   for (let i = 0; i < newArray.length; i++) {
+//     for (let j = i + 1; j < newArray.length; j++) {
+//       if (newArray[i] < newArray[j]) {
+//         temp = newArray[i];
+//         newArray[i] = newArray[j];
+//         newArray[j] = temp;
+//       }
+//     }
+//   }
 
-  console.log(newArray);
+//   console.log(newArray);
 
-  let finalResult = newArray.join('');
-  console.log(finalResult);
-}
+//   let finalResult = newArray.join('');
+//   console.log(finalResult);
+// }
 
-arrayLargestNumber([2, 20, -24, 6, 8]);
+// arrayLargestNumber([2, 20, -24, 6, 8]);
+
+//examples of this
+
+//1.
+//console.log(this);
+//2
+
+// function myName() {
+//   console.log(this);
+// }
+
+//myName();
+
+//3
+
+// var name = 'maithili';
+
+// function myName() {
+//   console.log(this.name);
+// }
+
+// myName();
+
+//4
+
+// let obj = {
+//   myage: 26,
+//   myname() {
+//     console.log(this.myage);
+//   },
+// };
+// obj.myname();
+
+//5(this type can be the interview question)
+
+// let obj={
+//   myage:26,
+//   myname:()=>{
+//     console.log(this.myage);
+//   }
+// }
+// obj.myname();
+
+//as we have learnt arrowfunction does not accept this.
+
+//it will come as undefined.
+
+//what will be the output of this below code?
+
+// let bioData = {
+//   myname: {
+//     realname: 'maithili',
+//     channelname: 'myra vlogs',
+//   },
+//   myage: 26,
+//   getBioData() {
+//     console.log(
+//       `my name is ${bioData.myname.channelname} and my age is ${bioData.myage}`
+//     );
+//   },
+// };
+
+// bioData.getBioData();
+
+//ouput:my name is myra vlogs and my age is 26
