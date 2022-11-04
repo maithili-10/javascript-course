@@ -175,11 +175,3 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 // }
 
 // arrayLargestNumber([2, 20, -24, 6, 8]);
-
-
-
-
-
-
-
-
