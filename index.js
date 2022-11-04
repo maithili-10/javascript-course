@@ -5,6 +5,8 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
+//programs
+
 //first way of creating object
 
 // let bioData={
@@ -173,68 +175,3 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 // }
 
 // arrayLargestNumber([2, 20, -24, 6, 8]);
-
-//examples of this
-
-//1.
-//console.log(this);
-//2
-
-// function myName() {
-//   console.log(this);
-// }
-
-//myName();
-
-//3
-
-// var name = 'maithili';
-
-// function myName() {
-//   console.log(this.name);
-// }
-
-// myName();
-
-//4
-
-// let obj = {
-//   myage: 26,
-//   myname() {
-//     console.log(this.myage);
-//   },
-// };
-// obj.myname();
-
-//5(this type can be the interview question)
-
-// let obj={
-//   myage:26,
-//   myname:()=>{
-//     console.log(this.myage);
-//   }
-// }
-// obj.myname();
-
-//as we have learnt arrowfunction does not accept this.
-
-//it will come as undefined.
-
-//what will be the output of this below code?
-
-let bioData = {
-  myname: {
-    realname: 'maithili',
-    channelname: 'myra vlogs',
-  },
-  myage: 26,
-  getBioData() {
-    console.log(
-      `my name is ${this.myname.channelname} and my age is ${this.myage}`
-    );
-  },
-};
-
-bioData.getBioData();
-
-//ouput:my name is myra vlogs and my age is 26
