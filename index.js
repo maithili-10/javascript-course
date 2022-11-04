@@ -176,3 +176,37 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 // arrayLargestNumber([2, 20, -24, 6, 8]);
 
+
+
+const person={
+  name:"fred",
+  age:27
+}
+
+console.log(Object.values(person));
+console.log(Object.entries(person));
+
+
+
+const array=[3,2,4,2,5,6,[2,3,4],[]]
+
+const flatArray=array.flat(1)
+console.log(flatArray)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
